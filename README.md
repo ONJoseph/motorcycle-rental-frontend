@@ -2,7 +2,7 @@
 
 
 <div align="center">
-  <img src="" alt="logo" width="400"  height="auto" />
+  <img src="vehicles_rental.jpg" alt="logo" width="400"  height="auto" />
   <br/><br/>
   <br/>
 </div>
