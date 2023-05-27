@@ -189,7 +189,7 @@ This project was implemented using:
  ## 🔭 Future Features <a name="future-features"></a>
  
 - [ ] **Add animation to create smooth user experience.**
-- [ ] **Enable only admin users to add or delete houses.**
+- [ ] **Enable only admin users to add or delete vehicles.**
 - [ ] **Implement proper user authentication from the front-end to the server.**
 - [ ] **Add unit and integration tests to ensure the app's integrity.**
  
