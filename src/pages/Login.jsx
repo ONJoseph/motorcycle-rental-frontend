@@ -4,13 +4,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styles/Login.module.css';
 import { useLoginMutation, clearError } from '../redux/sessionSlice';
 
-
 const Login = () => {
   const navigate = useNavigate();
   const [loginMutation] = useLoginMutation();
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({});
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
 
   const changeHandler = (e) => {
@@ -28,13 +27,12 @@ const Login = () => {
     const user = result.data?.user.name;
     if (user) {
       localStorage.setItem('user', user);
-      navigate('/')
+      navigate('/');
     } else {
       localStorage.clear();
       setErrorMessage(error);
-    };
-  }
-  
+    }
+  };
 
   useEffect(() => {
     const validRegex = /^[a-zA-Z0-9\s]+$/;

@@ -16,7 +16,7 @@ export const session = createApi({
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData
+          ...formData,
         }),
       }),
     }),
@@ -28,24 +28,23 @@ export const session = createApi({
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            ...formData,
+          ...formData,
         }),
       }),
       responseHandler: (response) => {
         if (response.ok) {
           return response.json();
-        } else {
-          throw new Error('Failed to log in');
         }
-      }, 
+        throw new Error('Failed to log in');
+      },
     }),
   }),
-})
+});
 
 export const {
   useSignUpMutation,
-  useLoginMutation
-} = session
+  useLoginMutation,
+} = session;
 
 const sessionSlice = createSlice({
   name: 'user',
