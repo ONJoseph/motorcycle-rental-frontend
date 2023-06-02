@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 
 import Login from './pages/Login';
-import Registration from './pages/Registration'
+import Registration from './pages/Registration';
 
 function App() {
   return (
