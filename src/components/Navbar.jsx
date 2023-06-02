@@ -53,7 +53,7 @@ const Navbar = () => {
             <NavLink to="/my-reservation" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               My Reservation
             </NavLink>
-            <NavLink to="/register" style={handleActive} className={navbar.signup} onClick={toggleMenu}>
+            <NavLink to="/registration" style={handleActive} className={navbar.signup} onClick={toggleMenu}>
               Sign Up
             </NavLink>
             <NavLink to="/login" style={handleActive} className={navbar.login} onClick={toggleMenu}>
