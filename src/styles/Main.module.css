@@ -17,6 +17,12 @@
   flex-direction: column;
 }
 
+/* .carouselContainer {
+  display: flex;
+  min-width: 100%;
+  min-height: 100%;
+} */
+
 .carCard {
   display: flex;
   flex-direction: column;
@@ -74,7 +80,7 @@
   display: none;
 }
 
-/* Styles for larger than 768*/
+/* Styles for larger than 768 */
 @media screen and (min-width: 768px) {
   .main {
     margin-left: 20vw;
@@ -126,8 +132,8 @@
 
   .btnNext {
     background-color: rgb(149, 192, 16);
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
     color: white;
     border: none;
     display: block;
@@ -139,12 +145,17 @@
   .btnPrev {
     background-color: rgb(149, 192, 16);
     color: white;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
     border: none;
     display: block;
     min-width: 50px;
     margin-top: auto;
     margin-bottom: auto;
+  }
+
+  .btnPrev:disabled,
+  .btnNext:disabled {
+    background-color: gray;
   }
 }
