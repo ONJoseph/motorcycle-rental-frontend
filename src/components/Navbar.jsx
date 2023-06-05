@@ -53,10 +53,10 @@ const Navbar = () => {
             <NavLink to="/my-reservation" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               My Reservation
             </NavLink>
-            <NavLink to="/registration" style={handleActive} className={navbar.signup} onClick={toggleMenu}>
+            <NavLink to="/registration" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               Sign Up
             </NavLink>
-            <NavLink to="/login" style={handleActive} className={navbar.login} onClick={toggleMenu}>
+            <NavLink to="/login" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               Log In
             </NavLink>
             <div className={navbar.nav__footer}>
@@ -68,15 +68,12 @@ const Navbar = () => {
                   <FaFacebookF />
                 </NavLink>
                 <NavLink to="https://www.google.com/" className={navbar.social_links}>
-                  {' '}
                   <TiSocialGooglePlus />
                 </NavLink>
                 <NavLink to="https://www.vimo.me/" className={navbar.social_links}>
-                  {' '}
                   <FaVimeoV />
                 </NavLink>
                 <NavLink to="https://www.pinterest.com/" className={navbar.social_links}>
-                  {' '}
                   <FaPinterestP />
                 </NavLink>
               </div>
