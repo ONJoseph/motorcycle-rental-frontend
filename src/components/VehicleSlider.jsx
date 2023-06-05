@@ -54,7 +54,7 @@ const VehicleSlider = () => {
             <Slider>
               {cars.map((car) => (
                 <Slide index={car.id - 1} key={car.id}>
-                  <Link to={`/cars/${car.id}`}>
+                  <Link to={`/vehicle/${car.id}`}>
                     <VehicleCard
                       brand={car.brand}
                       picture={car.picture}
