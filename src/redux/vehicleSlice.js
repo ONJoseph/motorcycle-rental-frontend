@@ -1,8 +1,11 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+// import { createEntityAdapter } from '@reduxjs/toolkit';
+import apiSlice from './api/apiSlice';
 
-export const vehicleSlice = createApi({
-  reducerPath: 'vehicle',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/api/v1' }),
+// const vehicleAdapter = createEntityAdapter();
+
+// const initialState = vehicleAdapter.getInitialState();
+
+export const vehicleApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getVehicles: builder.query({
       query: () => '/vehicles',
@@ -10,4 +13,4 @@ export const vehicleSlice = createApi({
   }),
 });
 
-export const { useGetVehiclesQuery } = vehicleSlice;
+export const { useGetVehiclesQuery } = vehicleApiSlice;

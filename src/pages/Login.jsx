@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styles/Login.module.css';
-import { useLoginMutation, clearError } from '../redux/sessionSlice';
+import { useLoginMutation } from '../redux/sessionSlice';
 
 const Login = () => {
   const navigate = useNavigate();
   const [loginMutation] = useLoginMutation();
-  const dispatch = useDispatch();
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
   const [isFormValid, setIsFormValid] = useState(false);
@@ -47,10 +45,6 @@ const Login = () => {
       setIsFormValid(false);
     }
   }, [formData]);
-
-  useEffect(() => {
-    dispatch(clearError());
-  }, [dispatch]);
 
   return (
     <section className={styles.onTopContainer}>

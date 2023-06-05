@@ -14,7 +14,7 @@ const VehicleSlider = () => {
   if (isLoading) {
     content = <p>Loading...</p>;
   } else if (isSuccess) {
-    content = JSON.stringfy(vehicles);
+    content = JSON.stringify(vehicles);
   } else if (isError) {
     content = <p>{error}</p>;
   }
