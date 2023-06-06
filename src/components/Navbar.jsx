@@ -53,6 +53,12 @@ const Navbar = () => {
             <NavLink to="/my-reservation" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               My Reservation
             </NavLink>
+            <NavLink to="/add-vehicle" style={handleActive} className={navbar.link} onClick={toggleMenu}>
+              Add Vehicle
+            </NavLink>
+            <NavLink to="/delete-vehicle" style={handleActive} className={navbar.link} onClick={toggleMenu}>
+              Delete Vehicle
+            </NavLink>
             <NavLink to="/registration" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               Sign Up
             </NavLink>

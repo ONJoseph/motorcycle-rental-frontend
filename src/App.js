@@ -18,6 +18,8 @@ function App() {
           <Route path="/vehicle/:id" element={<Vehicle />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/delete-vehicle" element={<Delete />} />
+          <Route path="/add-vehicle" element={<Add />} />
         </Routes>
       </div>
     </div>
