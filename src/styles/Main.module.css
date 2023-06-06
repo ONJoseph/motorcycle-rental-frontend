@@ -1,3 +1,4 @@
+
 .main {
   display: flex;
   flex-direction: column;
@@ -16,12 +17,6 @@
   display: flex;
   flex-direction: column;
 }
-
-/* .carouselContainer {
-  display: flex;
-  min-width: 100%;
-  min-height: 100%;
-} */
 
 .carCard {
   display: flex;
@@ -50,7 +45,10 @@
 }
 
 .carDescription {
+  display: flex;
+  flex-direction: column;
   color: gray;
+  align-items: center;
 }
 
 .carDescription h4 {
@@ -85,6 +83,7 @@
   .main {
     margin-left: 20vw;
     max-width: 80vw;
+    max-height: 100vh;
   }
 
   .header {
@@ -99,10 +98,6 @@
   .carDescription h4 {
     border-bottom: 1px solid lightgray;
     color: black !important;
-  }
-
-  .productslide {
-    margin-right: 50px !important;
   }
 
   .carBack::after,
