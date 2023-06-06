@@ -44,18 +44,10 @@ const Add = () => {
   const sendForm = async (e) => {
     e.preventDefault();
     try {
-      console.log(formData);
-      const response = await createVehicleMutation(formData);
-      if (response.ok) {
-        console.log('proceceed');
-        navigate('/');
-      } else {
-        console.log('error in else');
-        throw new Error('Failed to create');
-      }
+      await createVehicleMutation(formData);
+      navigate('/');
     } catch (error) {
       setError('Failed to create');
-      console.log('error in catch');
     }
   };
 

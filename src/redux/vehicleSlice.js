@@ -21,7 +21,9 @@ export const vehicleApiSlice = apiSlice.injectEndpoints({
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
+          vehicle: {
+            ...formData,
+          },
         }),
       }),
       responseHandler: (response) => {
