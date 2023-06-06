@@ -10,7 +10,10 @@ export const vehicleApiSlice = apiSlice.injectEndpoints({
     getVehicles: builder.query({
       query: () => '/vehicles',
     }),
+    getVehicleById: builder.query({
+      query: (id) => `/vehicles/${id}`,
+    }),
   }),
 });
 
-export const { useGetVehiclesQuery } = vehicleApiSlice;
+export const { useGetVehiclesQuery, useGetVehicleByIdQuery } = vehicleApiSlice;

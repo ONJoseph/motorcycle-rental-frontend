@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
 import Main from './pages/Main';
+import Vehicle from './pages/Vehicle';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <div className="content">
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/vehicle/:id" element={<Vehicle />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
         </Routes>

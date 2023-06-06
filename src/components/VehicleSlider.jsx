@@ -44,8 +44,8 @@ const VehicleSlider = () => {
     <div className={styles.productSlider}>
       {cars && cars.length > 0 ? (
         <CarouselProvider
-          naturalSlideWidth={100}
-          naturalSlideHeight={125}
+          naturalSlideWidth={85}
+          naturalSlideHeight={95}
           totalSlides={cars.length}
           visibleSlides={visibleSlides}
         >
@@ -54,7 +54,7 @@ const VehicleSlider = () => {
             <Slider>
               {cars.map((car) => (
                 <Slide index={car.id - 1} key={car.id}>
-                  <Link to={`/cars/${car.id}`}>
+                  <Link to={`/vehicle/${car.id}`}>
                     <VehicleCard
                       brand={car.brand}
                       picture={car.picture}
