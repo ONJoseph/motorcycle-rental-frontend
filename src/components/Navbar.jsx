@@ -50,7 +50,7 @@ const Navbar = () => {
             <NavLink to="/reservation" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               Reservation
             </NavLink>
-            <NavLink to="/my-reservation" style={handleActive} className={navbar.link} onClick={toggleMenu}>
+            <NavLink to="/my-reservations" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               My Reservation
             </NavLink>
             <NavLink to="/add-vehicle" style={handleActive} className={navbar.link} onClick={toggleMenu}>
