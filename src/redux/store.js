@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import sessionReducer, { session } from './sessionSlice';
+import apiSlice from './api/apiSlice';
 
 const store = configureStore({
   reducer: {
-    session: sessionReducer,
-    sessionFetch: session.reducer,
+    [apiSlice.reducerPath]: apiSlice.reducer,
   },
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(session.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(apiSlice.middleware),
+  devTools: true,
 });
 export default store;

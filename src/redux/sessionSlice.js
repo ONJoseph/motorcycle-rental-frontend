@@ -1,12 +1,11 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { createSlice } from '@reduxjs/toolkit';
+// import { createEntityAdapter } from '@reduxjs/toolkit';
+import apiSlice from './api/apiSlice';
 
-const initialState = {
-  data: {},
-};
+// const sessionAdapter = createEntityAdapter();
 
-export const session = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3000/api/v1' }),
+// const initialState = sessionAdapter.getInitialState();
+
+export const sessionApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     signUp: builder.mutation({
       query: (formData) => ({
@@ -44,23 +43,4 @@ export const session = createApi({
 export const {
   useSignUpMutation,
   useLoginMutation,
-} = session;
-
-const sessionSlice = createSlice({
-  name: 'user',
-  initialState,
-  reducers: {
-    setUserData(state, action) {
-      state.data = action.payload;
-    },
-    clearError(state) {
-      state.data = {
-        ...state.data,
-        message: '',
-      };
-    },
-  },
-});
-
-export const { setUserData, clearError } = sessionSlice.actions;
-export default sessionSlice.reducer;
+} = sessionApiSlice;

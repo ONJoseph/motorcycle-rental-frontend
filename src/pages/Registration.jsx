@@ -1,12 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import styles from '../styles/Login.module.css';
-import { useSignUpMutation, clearError } from '../redux/sessionSlice';
+import { useSignUpMutation } from '../redux/sessionSlice';
 
 const Registration = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [SignUpMutation] = useSignUpMutation();
   const [formData, setFormData] = useState({});
@@ -47,10 +45,6 @@ const Registration = () => {
       setIsFormValid(false);
     }
   }, [formData]);
-
-  useEffect(() => {
-    dispatch(clearError());
-  }, []);
 
   return (
     <section className={styles.onTopContainer}>
