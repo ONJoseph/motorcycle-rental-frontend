@@ -20,10 +20,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuItems, setMenuItems] = useState('');
   const location = useLocation();
+  const user = localStorage.getItem('user');
 
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('user');
+  };
 
   useEffect(() => {
     switch (location.pathname) {
@@ -59,12 +64,22 @@ const Navbar = () => {
             <NavLink to="/delete-vehicle" style={handleActive} className={navbar.link} onClick={toggleMenu}>
               Delete Vehicle
             </NavLink>
-            <NavLink to="/registration" style={handleActive} className={navbar.link} onClick={toggleMenu}>
-              Sign Up
-            </NavLink>
-            <NavLink to="/login" style={handleActive} className={navbar.link} onClick={toggleMenu}>
-              Log In
-            </NavLink>
+            {!user ? (
+              <>
+                <NavLink to="/registration" style={handleActive} className={navbar.link} onClick={toggleMenu}>
+                  Sign Up
+                </NavLink>
+                <NavLink to="/login" style={handleActive} className={navbar.link} onClick={toggleMenu}>
+                  Log In
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink to="/login" style={handleActive} className={navbar.link} onClick={handleLogout}>
+                  Log Out
+                </NavLink>
+              </>
+            )}
             <div className={navbar.nav__footer}>
               <div className={navbar.social__icons}>
                 <NavLink to="https://twitter.com/" className={navbar.social_links}>
