@@ -9,6 +9,7 @@ export const vehicleApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getVehicles: builder.query({
       query: () => '/vehicles',
+      providesTags: ['Vehicle'],
     }),
     getVehicleById: builder.query({
       query: (id) => `/vehicles/${id}`,
@@ -26,6 +27,7 @@ export const vehicleApiSlice = apiSlice.injectEndpoints({
           },
         }),
       }),
+      invalidatesTags: ['Vehicle'],
       responseHandler: (response) => {
         if (response.ok) {
           return response.json();
