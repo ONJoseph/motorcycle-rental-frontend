@@ -62,7 +62,8 @@
 
 .carSocial {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 30%;
 }
 
 .carIcons {
@@ -96,7 +97,7 @@
 
   .carouselContainer {
     position: relative;
-    padding-left: 30px;
+    padding-left: 50px;
   }
 
   .carDescription h4 {
@@ -139,7 +140,7 @@
     min-width: 50px;
     position: absolute;
     top: 50%;
-    right: -20px;
+    right: 0;
     transform: translateY(-50%);
   }
 
@@ -153,7 +154,7 @@
     min-width: 50px;
     position: absolute;
     top: 50%;
-    left: -20px;
+    left: 0;
     transform: translateY(-50%);
   }
 
