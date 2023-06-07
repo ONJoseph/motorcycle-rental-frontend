@@ -1,0 +1,15 @@
+
+.message {
+  padding-top: 25%;
+  max-height: 100vh;
+  text-align: center;
+}
+
+/* Styles for larger than 768 */
+@media screen and (min-width: 768px) {
+  .message {
+    margin-left: 20vw;
+    max-width: 80vw;
+    max-height: 100vh;
+  }
+}

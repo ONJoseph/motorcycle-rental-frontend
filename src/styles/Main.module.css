@@ -4,7 +4,6 @@
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
-  padding: 0 1.5rem;
 }
 
 .header {
@@ -63,7 +62,8 @@
 
 .carSocial {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 30%;
 }
 
 .carIcons {
@@ -93,6 +93,11 @@
 
   .header h6 {
     color: gray;
+  }
+
+  .carouselContainer {
+    position: relative;
+    padding-left: 50px;
   }
 
   .carDescription h4 {
@@ -133,8 +138,10 @@
     border: none;
     display: block;
     min-width: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
   }
 
   .btnPrev {
@@ -145,8 +152,10 @@
     border: none;
     display: block;
     min-width: 50px;
-    margin-top: auto;
-    margin-bottom: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 
   .btnPrev:disabled,
